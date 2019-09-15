@@ -1,4 +1,4 @@
-# UrTextView: An Android App Using Google Cloud OCR (optical character recognition) to Assist Text Reading Tasks
+# UrTextView: An Android Full Stack App Using Google Cloud Vision API to Assist Text Reading Tasks
 ## Overview
 One of the challenges that people who are blind or vision impaired face daily is to read small font tags. A tag on a Ketchup bottle or a tag showing the size of a sweater, reading them could be very hard for blind people. 
 UrTextView is an Android full stack application aims to help these people read texts easier.
@@ -10,3 +10,4 @@ automatically. After the backend send back the text content, display it on the s
 
 
 **The Logic diagram of the project**:  
+![logic](https://github.com/ZjWeb200/UrTextView/blob/master/logic.JPG)
