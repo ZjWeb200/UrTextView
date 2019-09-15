@@ -11,8 +11,8 @@ automatically. After the backend send back the text content, display it on the s
 **The logic diagram of the project**:  
 ![logic](https://github.com/ZjWeb200/UrTextView/blob/master/logic.JPG)
 
-**Front end Android App at launch**:
+**Front end Android App at launch**: <br />
 <img src="https://github.com/ZjWeb200/UrTextView/blob/master/frontend.jpg" width="300" height="500">
 
-**Demo showing recognize a tiny wash tag**:
+**Demo showing recognize a tiny wash tag**: <br />
 <img src="https://github.com/ZjWeb200/UrTextView/blob/master/demo.png" width="300" height="500">
