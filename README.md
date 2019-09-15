@@ -14,5 +14,5 @@ automatically. After the backend send back the text content, display it on the s
 **Front end Android App at launch**: <br />
 <img src="https://github.com/ZjWeb200/UrTextView/blob/master/frontend.jpg" width="300" height="500">
 
-**Demo showing recognize a tiny wash tag**: <br />
+**Demo of recognizing a tiny wash tag**: <br />
 <img src="https://github.com/ZjWeb200/UrTextView/blob/master/demo.png" width="300" height="500">
