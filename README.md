@@ -12,7 +12,7 @@ automatically. After the backend send back the text content, display it on the s
 ![logic](https://github.com/ZjWeb200/UrTextView/blob/master/logic.JPG)
 
 **Front end Android App at launch**:
-![frontend](https://github.com/ZjWeb200/UrTextView/blob/master/frontend.jpg)
+![frontend](https://github.com/ZjWeb200/UrTextView/blob/master/frontend.jpg){:height="50%" width="50%"}
 
 **Demo showing recognize a tiny wash tag**:
-![demo](https://github.com/ZjWeb200/UrTextView/blob/master/demo.png)
+![demo](https://github.com/ZjWeb200/UrTextView/blob/master/demo.png){:height="50%" width="50%"}
