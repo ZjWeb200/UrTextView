@@ -8,7 +8,7 @@ automatically. After the backend send back the text content, display it under th
 
 **Back end**: Java servlet with RESTful API based on Apache Tomcat Server and lives on Google Cloud Platform using Google Cloud Vision OCR (optical character recognition) API. OCR interprets the text content of our image. Then the content is sent back as reponse to the client.
 
-A little details about the backend: the backend is deployed on Google Cloud Platform using GKE (Google Kubernetes Engine). The master of GKE controls 3 virtual-machine nodes. Each of the VM node contains a published Docker image built on our service. (The Docker image is published on DockerHub. In this way, we can deploy our servie on the VM nodes easily.) <br /> The reason I chose GKE instead of simple GCE (Google Compute Engine): during development, I found that with a single GCE VM, the app runs very slow sometimes. This latency problem is soleved by switching to GKE.
+**A little details about the backend**: the backend is deployed on Google Cloud Platform using GKE (Google Kubernetes Engine). The master of GKE controls 3 virtual-machine nodes. Each of the VM node contains a published Docker image built on our service. (The Docker image is published on DockerHub. In this way, we can deploy our servie on the VM nodes easily.) <br /> The reason I chose GKE instead of simple GCE (Google Compute Engine): during development, I found that with a single GCE VM, the app runs very slow sometimes. This latency problem is soleved by switching to GKE.
 
 **The logic diagram of the project**:  
 ![logic](https://github.com/ZjWeb200/UrTextView/blob/master/logic.png)
