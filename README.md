@@ -10,6 +10,8 @@ automatically. After the backend send back the text content, display it under th
 
 **A little details about the backend**: the backend is deployed on Google Cloud Platform using GKE (Google Kubernetes Engine). The master of GKE controls 3 virtual-machine nodes. Each of the VM node contains a published Docker image built on our service. (The Docker image is published on DockerHub. In this way, we can deploy our servie on the VM nodes easily.) <br /> The reason I chose GKE instead of simple GCE (Google Compute Engine): during development, I found that with a single GCE VM, the app runs very slow sometimes. This latency problem is soleved by switching to GKE.
 
+**Things in my mind**: To further improve the user experience, we can add sound service to the application. Once we display the content on the screen, the user can choose to hear the texts. Nowadays, many of the smartphones have this kind of accessibility function. 
+
 **The logic diagram of the project**:  
 ![logic](https://github.com/ZjWeb200/UrTextView/blob/master/logic.png)
 
