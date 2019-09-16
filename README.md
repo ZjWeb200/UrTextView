@@ -9,7 +9,7 @@ automatically. After the backend send back the text content, display it on the s
 **Back end**: Java servlet with RESTful API based on Apache Tomcat Server and lives on Google Cloud Platform using Google Cloud Vision OCR (optical character recognition) API. OCR interprets the text content of our picture. Then the content is sent back as reponse to the client.
 
 **The logic diagram of the project**:  
-![logic](https://github.com/ZjWeb200/UrTextView/blob/master/logic.JPG)
+![logic](https://github.com/ZjWeb200/UrTextView/blob/master/logic.png)
 
 **Front end Android App at launch**: <br />
 <img src="https://github.com/ZjWeb200/UrTextView/blob/master/frontend.jpg" width="300" height="500">
