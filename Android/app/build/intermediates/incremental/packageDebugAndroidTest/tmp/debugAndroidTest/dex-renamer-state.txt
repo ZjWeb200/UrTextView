@@ -1,0 +1,7 @@
+#Fri Aug 23 02:28:52 PDT 2019
+base.0=/Users/yuzhong/Documents/laioffer/laiproject-titan/vizassist/Android/VizAssist/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/out
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/yuzhong/Documents/laioffer/laiproject-titan/vizassist/Android/VizAssist/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/out

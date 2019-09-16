@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Fri Aug 23 00:40:44 PDT 2019
+1.base=/Users/yuzhong/Documents/laioffer/laiproject-titan/vizassist/Android/VizAssist/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/out
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=/Users/yuzhong/Documents/laioffer/laiproject-titan/vizassist/Android/VizAssist/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/out
+1.path=classes.dex
