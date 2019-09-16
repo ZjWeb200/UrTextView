@@ -3,8 +3,8 @@
 One of the challenges that people who are blind or vision impaired face daily is to read tags with tiny font size. List of ingredients on a ketchup bottle or a tag showing how to wash a sweater, reading these texts is very hard for people who are blind. 
 UrTextView is an Android application aims to help these people read texts easier.
 
-**Front end**: Android app with camera enabled or gallery accessible. User may take a picture of a piece of text or choose an already existed picture with text in it from gallery, the picture is then sent to the backend
-automatically. After the backend send back the text content, display it under the input image for user to read easily.
+**Front end**: Android app with camera enabled or gallery accessible. User may take a picture of a piece of text or choose an already existing picture with text in it from gallery. The picture is then sent to the backend
+automatically. After the backend sends back the text content, display it under the input image for user to read easily.
 
 **Back end**: Java servlet with RESTful API based on Apache Tomcat Server and lives on Google Cloud Platform using Google Cloud Vision OCR (optical character recognition) API. OCR interprets the text content of our image. Then the content is sent back as reponse to the client.
 
