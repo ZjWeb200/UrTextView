@@ -15,7 +15,6 @@ import androidx.core.content.ContextCompat;
 
 import com.example.UrTextView.imagepipeline.ImageActions;
 import com.example.UrTextView.utilities.HttpUtilities;
-import com.example.UrTextView.utilities.MainActivitySpeechController;
 
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
@@ -124,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mainActivitySpeechController.playStop();
+        mainActivitySpeechController.playStop();   // when close the app, stop the speaker if it is playing.
     }
 
     private void uploadImage(Bitmap bitmap) {
