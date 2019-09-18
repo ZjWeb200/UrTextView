@@ -11,11 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.example.UrTextView.imagepipeline.ImageActions;
 import com.example.UrTextView.utilities.HttpUtilities;
+import com.example.UrTextView.utilities.MainActivitySpeechController;
 
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
@@ -35,13 +35,14 @@ public class MainActivity extends AppCompatActivity {
     private static final int CAMERA_PERMISSION_REQUEST = 1001;
 
     private MainActivityUIController mainActivityUIController;
-
+    private MainActivitySpeechController mainActivitySpeechController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mainActivityUIController = new MainActivityUIController(this);
+        mainActivitySpeechController = new MainActivitySpeechController(this);
     }
 
     @Override
@@ -65,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_gallery:
                 mainActivityUIController.updateResultView(getString(R.string.result_placeholder));
                 ImageActions.startGalleryActivity(this, SELECT_IMAGE_CODE);
+                break;
+            case R.id.action_play:
+                mainActivitySpeechController.playAudio();
                 break;
             default:
                 break;
@@ -115,6 +119,12 @@ public class MainActivity extends AppCompatActivity {
                 thread.start();
             }
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mainActivitySpeechController.playStop();
     }
 
     private void uploadImage(Bitmap bitmap) {

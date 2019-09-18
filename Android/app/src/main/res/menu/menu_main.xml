@@ -13,4 +13,10 @@
         android:orderInCategory="101"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_photo_album_white_24dp"/>
+
+    <item android:id="@+id/action_play"
+        android:title="@string/play_button"
+        android:orderInCategory="99"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_hearing_black_24dp"/>
 </menu>
