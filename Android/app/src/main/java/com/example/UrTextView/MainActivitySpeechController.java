@@ -46,7 +46,6 @@ public class MainActivitySpeechController {
     public void playStop() {
         if (textToSpeech != null) {
             textToSpeech.stop();
-            textToSpeech.shutdown();
         }
     }
 }

@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -121,9 +122,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mainActivitySpeechController.playStop();   // when close the app, stop the speaker if it is playing.
+    public void onPause() {
+        super.onPause();
+        mainActivitySpeechController.playStop();   // when make the app to background or close the app, stop the speaker if it is playing.
     }
 
     private void uploadImage(Bitmap bitmap) {
