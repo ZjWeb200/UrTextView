@@ -14,7 +14,8 @@ automatically. After the backend sends back the text content, push button to sho
 ![logic](https://github.com/ZjWeb200/UrTextView/blob/master/logic.png)
 
 **Frontend Android App at launch**: <br />
-<img src="https://github.com/ZjWeb200/UrTextView/blob/master/frontend.jpg" width="300" height="500">
+<img src="https://github.com/ZjWeb200/UrTextView/blob/master/launch.jpg" width="300" height="500">
 
 **Demo of recognizing a tiny wash tag**: <br />
-<img src="https://github.com/ZjWeb200/UrTextView/blob/master/demo.jpg" width="300" height="500">
+<img src="https://github.com/ZjWeb200/UrTextView/blob/master/upload_image.jpg" width="300" height="500">
+<img src="https://github.com/ZjWeb200/UrTextView/blob/master/recognize.jpg" width="300" height="500">
