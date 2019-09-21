@@ -25,32 +25,7 @@ public class AnnotateHelper {
 		OK, ERROR;
 	}
 	
-	public static Status annotate(Image img, StringBuilder result) {
-
-		// Not required when running on GCE because the default service account to run
-		// GCE VM can do authentication directly.
-//		GoogleCredentials myCredentials;
-//		try {
-//			myCredentials = GoogleCredentials
-//					.fromStream(new FileInputStream("E:\\LaiProject\\Project\\UrTextView\\UrTextView_credentials.json"))
-//					.createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//			return Status.ERROR;
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//			return Status.ERROR;
-//		}
-//
-//		ImageAnnotatorSettings imageAnnotatorSettings;
-//		try {
-//			imageAnnotatorSettings = ImageAnnotatorSettings.newBuilder()
-//					.setCredentialsProvider(FixedCredentialsProvider.create(myCredentials)).build();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//			return Status.ERROR;
-//		}
-		
+	public static Status annotate(Image img, StringBuilder result) {		
 		// Instantiates a client
 		// This is the Cloud Vision API Client
 		try (ImageAnnotatorClient vision = ImageAnnotatorClient.create()) {

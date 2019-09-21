@@ -13,5 +13,10 @@
     <string name="internet_error_message">Error sending image to server, please try again.</string>
     <string name="error_dialog_title">Alert</string>
     <string name="error_dialog_dismiss_button">OK</string>
+    <string name="image_not_selected">No photo selected yet.</string>
+    <string name="image_sent">Photo sent for text recognition.</string>
+    <string name="image_send_failed">Image sending failed. Please try again or check network.</string>
+    <string name="recognition_dialog_title">Recognition result</string>
+    <string name="result_button_text">Show recognition result</string>
 
 </resources>

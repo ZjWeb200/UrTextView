@@ -7,7 +7,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -26,7 +25,7 @@ import java.net.HttpURLConnection;
 public class MainActivity extends AppCompatActivity {
 
     // Connected to the backend GKE on Google Cloud Platform
-    private static final String UPLOAD_HTTP_URL = "http://35.185.200.102/UrTextView/annotate";
+    private static final String UPLOAD_HTTP_URL = "YOUR IP ADDRESS";
 
     private static final int IMAGE_CAPTURE_CODE = 1;
     private static final int SELECT_IMAGE_CODE = 2;
@@ -35,14 +34,12 @@ public class MainActivity extends AppCompatActivity {
     private static final int CAMERA_PERMISSION_REQUEST = 1001;
 
     private MainActivityUIController mainActivityUIController;
-    private MainActivitySpeechController mainActivitySpeechController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mainActivityUIController = new MainActivityUIController(this);
-        mainActivitySpeechController = new MainActivitySpeechController(this);
     }
 
     @Override
@@ -56,24 +53,20 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_capture:
-                mainActivityUIController.updateResultView(getString(R.string.result_placeholder));
+                mainActivityUIController.updateResultText(getString(R.string.result_placeholder));
                 if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                     mainActivityUIController.askForPermission(Manifest.permission.CAMERA, CAMERA_PERMISSION_REQUEST);
                 } else {
                     ImageActions.startCameraActivity(this, IMAGE_CAPTURE_CODE);
                 }
-                break;
+                return true;
             case R.id.action_gallery:
-                mainActivityUIController.updateResultView(getString(R.string.result_placeholder));
+                mainActivityUIController.updateResultText(getString(R.string.result_placeholder));
                 ImageActions.startGalleryActivity(this, SELECT_IMAGE_CODE);
-                break;
-            case R.id.action_play:
-                mainActivitySpeechController.playAudio();
-                break;
+                return true;
             default:
-                break;
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -121,18 +114,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        mainActivitySpeechController.playStop();   // when make the app to background or close the app, stop the speaker if it is playing.
-    }
-
+    // The method to communicate with our backend server.
     private void uploadImage(Bitmap bitmap) {
         try {
             HttpURLConnection conn = HttpUtilities.makeHttpPostConnectionToUploadImage(bitmap, UPLOAD_HTTP_URL);
             conn.connect();
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                mainActivityUIController.updateResultView(HttpUtilities.parseOCRResponse(conn));
+                // update alert dialog content to the backend response.
+                mainActivityUIController.updateResultText(HttpUtilities.parseOCRResponse(conn));
             } else {
                 mainActivityUIController.showInternetError();
             }

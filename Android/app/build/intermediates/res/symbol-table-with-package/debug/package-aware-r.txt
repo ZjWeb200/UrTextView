@@ -630,7 +630,6 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable ic_camera_alt_white_24dp
-drawable ic_hearing_black_24dp
 drawable ic_launcher
 drawable ic_photo_album_white_24dp
 drawable notification_action_background
@@ -671,7 +670,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_play
 id action_text
 id actions
 id activity_chooser_view_content
@@ -893,10 +891,15 @@ string error_dialog_dismiss_button
 string error_dialog_title
 string gallery_button
 string hello_world
+string image_not_selected
+string image_send_failed
+string image_sent
 string internet_error_message
 string permission_denied_message
 string play_button
 string reading_error_message
+string recognition_dialog_title
+string result_button_text
 string result_placeholder
 string search_menu_title
 string status_bar_notification_info_overflow
