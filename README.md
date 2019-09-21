@@ -4,7 +4,7 @@ One of the challenges that people who are blind or visually impaired face daily 
 UrTextView is an Android application aims to help these people read/hear texts easier.
 
 **Frontend**: Android app with camera enabled or gallery accessible. User may take a picture of a piece of text or choose an already existing picture with text in it from gallery. The picture is then sent to the backend
-automatically. After the backend sends back the text content, display it under the input image. Finally, the user may choose to hear the content. The app takes advantage of the TTS (Text To Speech) technology to convert texts to speech for the user.
+automatically. After the backend sends back the text content, push button to show it in an AlertDialog. Finally, user is able to hear the content. To do so, the app takes advantage of the Android Accessibility Suite's TalkBack by Google. 
 
 **Backend**: Java servlet with RESTful API based on Apache Tomcat Server and lives on Google Cloud Platform using Google Cloud Vision OCR (optical character recognition) API. OCR interprets the text content of our image. Then the content is sent back as reponse to the client.
 
