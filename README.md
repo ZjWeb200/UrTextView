@@ -19,3 +19,7 @@ automatically. After the backend sends back the text content, push button to sho
 **Demo of recognizing a tiny wash tag**: <br />
 <img src="https://github.com/ZjWeb200/UrTextView/blob/master/upload_image.jpg" width="300" height="500">
 <img src="https://github.com/ZjWeb200/UrTextView/blob/master/recognize.jpg" width="300" height="500">
+
+
+**Google Play Store**: <br />
+[UrTextView](https://play.google.com/store/apps/details?id=com.application.UrTextView&hl=en_US)
